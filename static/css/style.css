@@ -1,0 +1,150 @@
+:root {
+    --primary-100: #4993e1;
+    --primary-200: #75ade8;
+    --primary-300: #a1c7ef;
+    --accent-100: #f7a30d;
+    --accent-200: #f7a30d;
+    --accent-300: #f7a30d;
+    --background-100: #fbfdfe;
+    --background-200: #e7f3f9;
+    --background-300: #d2e9f4;
+    --text-100: #0c1926;
+    --text-200: #18334d;
+    --text-300: #244c74;
+}
+
+body {
+    margin: auto;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    color:var(--text-100);
+    background-color: var(--background-300);
+}
+#user_name {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 50vh;
+}
+
+#user_name div{
+
+    padding: 20px;
+}
+
+#user_name div label {
+    font-size:1.3rem;
+}
+
+#user_name input {
+    margin: auto;
+    max-width: 60vw;
+    font-size:1.1rem;
+    background-color: var(--background-300);
+}
+
+
+.project {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.main_rating_cont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create 3 equal columns */
+    gap: 20px;
+}
+
+.result-container , #user_name{
+    /* width: 40vw;
+    height: 12vh; */
+    background: var(--background-100);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.parent_card {
+    margin: 0% 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+}
+
+.rating-container {
+    width: 25%;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.rating-container:hover{
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+.rating-container h2 {
+    align-self: center;
+    margin: 20px;
+}
+
+
+
+.rating-container div *  {
+    margin: 20px;
+    padding: 1px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: 3px solid var(--accent-100);
+    border-radius: 4px;
+    background-color: var(--background-300);
+    color: var(--primary-100);
+    padding: 20px;
+}
+
+.rating-container div select option {
+    font-size: 1.2rem;
+    color: var(--primary-100);
+}
+
+
+button {
+    color: var(--background-100);
+    background-color: var(--accent-300);
+    font-size: 1.4rem;
+    font-weight: bolder;
+    margin: 10px;
+    padding: 14px;
+    border: 0px ;
+    border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+    .rating-container {
+        width: 90%;
+        font-size: 0.9em;
+        justify-self: center;
+    }
+
+    #user_name {
+        width: 80%;
+    }
+
+}

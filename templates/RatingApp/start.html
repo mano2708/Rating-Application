@@ -1,0 +1,17 @@
+<html>
+    {% extends 'RatingApp/base.html' %}
+    {% block content %}
+    {% load static %}
+            <div class="start">        
+                <!-- <h4>
+                    At our expo, you can explore and rate innovative projects from this year's expo. Your feedback is crucial in spotlighting the best ideas and inspiring future innovations. Dive in, share your thoughts, and help us celebrate creativity together!
+                </h4> -->
+                <form method="POST" id="user_name">
+                    {% csrf_token %}
+                    {{ userform }}
+                    <a href="/inaugral"><button type="submit" >LOGIN</button></a>
+                </form>
+
+            </div>
+    {% endblock %}
+</html>
