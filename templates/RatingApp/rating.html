@@ -1,0 +1,21 @@
+<html>
+    {% extends 'RatingApp/base.html' %}
+    {% block content %}
+    {% load static %}
+    <div class="rating">
+        <form method="POST" id="rating_form">
+            {% csrf_token %}
+            <div class="parent_card">
+                {% for field in data %}
+                <div class="rating-container">
+                    <h2>{{ field.label }}</h2>
+                    <div>{{ field }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <button type="submit" class="submit">Submit</button>
+            
+        </form>
+    </div>
+    {% endblock %}
+</html>

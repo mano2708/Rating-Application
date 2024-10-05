@@ -1,0 +1,40 @@
+<html>
+    {% extends 'RatingApp/base.html' %}
+    {% load static %}
+    {% block content %}
+        <div class="result">
+            <h1>Hello {{ user_name }}</h1>
+
+            
+            <h1>Rating Details</h1>
+            <h2>Second years</h2>
+            
+            <div class="main_rating_cont">
+                
+            {% if second_year_data and third_year_data %}
+                {% for name ,rating in second_year_data.items %}
+
+                    <div class="result-container">
+                        <h3>{{ name }} </h3>
+                        <h2>{{ rating }}</h2>
+                    </div>
+                {% endfor %}
+            </div>
+            <h2>Third years</h2>
+            <div class="main_rating_cont">
+                {% for name ,rating in third_year_data.items %}
+                    <div class="result-container">
+                        <h3>{{ name }} </h3>
+                        <h2>{{ rating }}</h2>  
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No ratings found for your account.</p>
+            {% endif %}
+            </div>
+            </div>
+    <p style="text-align: center;">NOTE:To view the page properly,you can use Desktop.Ignore if you use Desktop </p>
+    </div>
+       
+    {% endblock %}
+</html>
