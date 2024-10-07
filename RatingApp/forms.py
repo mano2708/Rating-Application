@@ -19,10 +19,11 @@ class UserNameForm(forms.ModelForm):
       widgets = {
             'name': forms.TextInput(attrs={
                 'class': 'form_name',
-                'placeholder': 'Enter your name',
+                
+                'placeholder': f'{User._meta.get_field("name").help_text}',
             }),
             'email': forms.EmailInput(attrs={
                 'class': 'form_email',
-                'placeholder': 'Enter your email',
+                'placeholder': f'{User._meta.get_field("email").help_text}',
             }),
         }
