@@ -30,9 +30,10 @@ def SecondYearView(request):
             rating_instance.user = User.objects.get(email = request.session['user_email'])
             rating_instance.save()
             messages.success(request, "Your ratings have been submitted successfully!")
+
             return redirect('/thirdyear')
 
-    return render(request, 'RatingApp/rating.html', {'data': form, "user_name":user_name})
+    return render(request, 'RatingApp/rating.html', {'data': form, "year":"Second Year" , "user_name":user_name})
 
 def ThirdYearView(request):
     user_name = request.session.get('user_name', '')
@@ -48,7 +49,7 @@ def ThirdYearView(request):
             messages.success(request, "Your ratings have been submitted successfully!")
             return redirect('/result')
 
-    return render(request, 'RatingApp/rating.html', {'data': form, "user_name":user_name})
+    return render(request, 'RatingApp/rating.html', {'data': form, "year":"Third Year","user_name":user_name})
 
 
 def Success_view(request):

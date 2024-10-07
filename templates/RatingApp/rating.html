@@ -3,11 +3,14 @@
     {% block content %}
     {% load static %}
     <div class="rating">
+        <h2>{{ year }} Projects</h2>
         <form method="POST" id="rating_form">
             {% csrf_token %}
             <div class="parent_card">
                 {% for field in data %}
                 <div class="rating-container">
+                    <h1>{{ field.help_text }}</h1> 
+                    <h3>by</h3>
                     <h2>{{ field.label }}</h2>
                     <div>{{ field }}</div>
                 </div>

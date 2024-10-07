@@ -16,6 +16,7 @@
 body {
     margin: auto;
     justify-content: center;
+    align-items: center;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
@@ -28,12 +29,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60vw;
-    height: 50vh;
+    /* width: 60vw; */
+    height: 40vh;
+    background-color: var(--background-100);
 }
 
 #user_name div{
-
     padding: 20px;
 }
 
@@ -45,6 +46,9 @@ body {
     margin: auto;
     max-width: 60vw;
     font-size:1.1rem;
+    border: none;
+    border-radius: 6px;
+    padding: 9px;
     background-color: var(--background-300);
 }
 
@@ -67,7 +71,7 @@ body {
     height: 12vh; */
     background: var(--background-100);
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -82,7 +86,7 @@ body {
 
 .rating-container {
     width: 25%;
-    margin: 20px auto;
+    margin: 15px auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -100,9 +104,10 @@ body {
 }
 
 
-.rating-container h2 {
+.rating-container h1 {
     align-self: center;
-    margin: 20px;
+    margin: 6px;
+    padding: 0px 40px;
 }
 
 
@@ -133,7 +138,7 @@ button {
     margin: 10px;
     padding: 14px;
     border: 0px ;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 @media (max-width: 900px) {
