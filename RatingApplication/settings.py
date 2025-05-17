@@ -16,8 +16,9 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR1 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATES_DIR = os.path.join(BASE_DIR1,'templates')
-STATIC_DIR = os.path.join(BASE_DIR1,'static')
+TEMPLATES_DIR = os.path.join(BASE_DIR1,'templates/')
+STATIC_DIR = os.path.join(BASE_DIR1,'static/')
+STATIC_ROOT =  os.path.join(BASE_DIR1,"static/")
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,7 +30,7 @@ SECRET_KEY = 'django-insecure-n@l&cgbb=-8^dap@4f9-59(e8wj1-wkq7v6gahea+mzms!-&%+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.0.139.174','.amazonaws.com','127.0.0.1','localhost','0.0.0.0']
 
 
 # Application definition
@@ -121,11 +122,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
     
-STATICFILES_DIRS=[
-    STATIC_DIR,
-]
+#STATICFILES_DIRS=[
+#    STATIC_DIR,
+#]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
